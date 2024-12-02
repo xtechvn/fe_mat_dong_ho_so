@@ -27,7 +27,7 @@ namespace NewSolution.ViewComponents.News
             try
             {
                 // Nếu không có trong cache, gọi dịch vụ
-                var cacheKey = "menu_news"; // Đặt khóa cho cache
+                var cacheKey = "menu_news_oclock"; // Đặt khóa cho cache
                 if (!_cache.TryGetValue(cacheKey, out var cached_view)) // Kiểm tra xem có trong cache không
                 {
                     var objMenu = new MenuService(configuration, _redisService);

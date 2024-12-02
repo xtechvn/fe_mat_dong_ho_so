@@ -26,7 +26,7 @@ namespace NewSolution.ViewComponents.GroupProduct
             try
             {
                 // Nếu không có trong cache, gọi dịch vụ
-                var cacheKey = "group_product_" + group_product_parent_id; // Đặt khóa cho cache
+                var cacheKey = "group_product_oclock_" + group_product_parent_id; // Đặt khóa cho cache
                 if (!_cache.TryGetValue(cacheKey, out var cached_data_view)) // Kiểm tra xem có trong cache không
                 {
                     var objMenu = new MenuService(configuration, _redisService);

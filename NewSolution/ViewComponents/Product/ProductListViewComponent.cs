@@ -31,7 +31,7 @@ namespace NewSolution.ViewComponents.Product
             try
             {
                 // Nếu không có trong cache, gọi dịch vụ
-                var cacheKey = "product_list_" + _group_product_id + "_" + _page_index + _page_size; // Đặt khóa cho cache
+                var cacheKey = "product_list_oclock_" + _group_product_id + "_" + _page_index + _page_size; // Đặt khóa cho cache
                 if (!_cache.TryGetValue(cacheKey, out var cached_view)) // Kiểm tra xem có trong cache không
                 {
                     var objMenu = new ProductsService(configuration, _redisService);                   

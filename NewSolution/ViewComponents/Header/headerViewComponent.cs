@@ -21,7 +21,7 @@ namespace NewSolution.ViewComponents.Header
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var cacheKey = "headerMenu"; // Đặt khóa cho cache
+            var cacheKey = "headerMenu_oclock"; // Đặt khóa cho cache
             var referer = Request.Headers["Referer"].ToString();
 
             if (!_cache.TryGetValue(cacheKey, out var cachedMenu)) // Kiểm tra xem có trong cache không

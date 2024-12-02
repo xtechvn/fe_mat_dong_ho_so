@@ -28,7 +28,7 @@ namespace NewSolution.ViewComponents.Article
         {
             try
             {
-                var cacheKey = "CATEGORY_BOX_VIEW" + _zone_info.category_id + _zone_info.skip + _zone_info.take; //Cache view trang tin home
+                var cacheKey = "CATEGORY_BOX_VIEW_OCLOCK_" + _zone_info.category_id + _zone_info.skip + _zone_info.take; //Cache view trang tin home
 
                 if (!_cache.TryGetValue(cacheKey, out var cached_view)) // Kiểm tra xem có trong cache không
                 {
