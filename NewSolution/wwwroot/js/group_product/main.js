@@ -1,6 +1,6 @@
 
 var total_product = 12; // Tổng số sản phẩm của 1 box
-var group_id_product_top = 54;// id nhóm sản phẩm box SẢN PHẨM NỔI BẬT
+var group_id_product_top = 43;// id nhóm sản phẩm box SẢN PHẨM NỔI BẬT
 
 $(document).ready(function () {
 
@@ -131,7 +131,7 @@ var group_product = {
             dataType: 'html',
             type: 'POST',
             url: '/home/loadProductTopComponent',
-            data: { group_product_id: group_id_product_top, _page_index: 0, page_size: total_product, view_name: "~/Views/Shared/Components/Product/BoxProductBottomRight.cshtml" },
+            data: { group_product_id: -1, _page_index: 0, page_size: total_product, view_name: "~/Views/Shared/Components/Product/BoxProductBottomRight.cshtml" },
             success: function (data) {
                 $('#group-product-bottom-left').html(data);
                 const swiperFlash = new Swiper('.section-flashsale .product-slide', {
